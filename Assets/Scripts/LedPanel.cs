@@ -35,9 +35,25 @@ public class LedPanel : MonoBehaviour
     public void ValidatePart(int nbrPart)
     {
         list[currentLed].color = Color.green;
+        if (nbrPart == currentLed)
+        {
+            currentLed = 0;
+        }
+        else
+        {
+            currentLed++;
+        }
     }
     public void FailedPart(int nbrPart)
     {
         list[currentLed].color = Color.red;
+        if (nbrPart == currentLed)
+        {
+            currentLed = 0;
+        }
+        else
+        {
+            currentLed++;
+        }
     }
 }

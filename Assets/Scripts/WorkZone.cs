@@ -9,10 +9,12 @@ public class WorkZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         int a = other.transform.childCount;
+        other.GetComponent<Sequence>().IsInWorkZone = true;
         Debug.Log("is in work zone");
         spawn.Spawn();
         panel.NewPeluche(a);
     }
+
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("out of work zone");

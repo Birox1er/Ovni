@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreOther : MonoBehaviour
 {
     [SerializeField]private float frequence;
-    [SerializeField] private string name;
+    [SerializeField] private string npcName;
     private float time;
     private int score;
     private TextMeshProUGUI textScore;
@@ -18,24 +18,29 @@ public class ScoreOther : MonoBehaviour
         score = 0;
         time = 0;
         textScore= GetComponent<TextMeshProUGUI>();
-        textScore.text = name + " : " + score;
+        textScore.text = npcName + " : " + score;
     }
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= frequence && frequence!=0 )
+        float rand = Random.Range(0.85f, 1.16f);
+        if (time >= frequence*rand && frequence!=0 )
         {
+            
             AddScore();
             time = 0;          
         }
-        textScore.text = name + " : " + score;
+        textScore.text = npcName + " : " + score;
     }
-    void AddScore()
+    public void AddScore()
     {
         score += 1;
     }
-    void RemoveScroe()
+    public void RemoveScore()
     {
-        score -= 1;
+        if (score > 0)
+        {
+            score -= 1;
+        }
     }
 }
