@@ -17,7 +17,7 @@ public class Move : MonoBehaviour
         moveinput = Input.GetAxis("Wheel");
         if (Math.Abs(moveinput)>0.2)
          {
-          transform.position += new Vector3(Math.Abs(moveinput) * speed * Time.deltaTime, 0, 0);
+          transform.position += new Vector3(0, 0, Math.Abs(moveinput) * speed * Time.deltaTime);
          } 
         
 

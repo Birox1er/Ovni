@@ -1421,6 +1421,8 @@ MonoBehaviour:
   Peluches:
   - {fileID: 7108915584309289912, guid: 7ed2b3537aa00ed468278a281b5bbc1f, type: 3}
   - {fileID: 7108915584309289912, guid: de376f1abbcd5664c9f5a49b5c8b8dd0, type: 3}
+  - {fileID: 7108915584309289912, guid: de376f1abbcd5664c9f5a49b5c8b8dd0, type: 3}
+  - {fileID: 7108915584309289912, guid: de376f1abbcd5664c9f5a49b5c8b8dd0, type: 3}
 --- !u!1 &2023160120
 GameObject:
   m_ObjectHideFlags: 0
