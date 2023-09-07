@@ -23,11 +23,19 @@ public class ScoreOther : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= frequence /*&& is not player*/ )
+        if (time >= frequence && frequence!=0 )
         {
-            score += 1;
+            AddScore();
             time = 0;          
         }
         textScore.text = name + " : " + score;
+    }
+    void AddScore()
+    {
+        score += 1;
+    }
+    void RemoveScroe()
+    {
+        score -= 1;
     }
 }

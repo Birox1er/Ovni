@@ -6,15 +6,20 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    [SerializeField] private int speed=10;
-    //float moveinput=?;
+    [SerializeField] private float speed;
+    float moveinput;
+    private void Start()
+    {
+       
+    }
     void Update()
     {
-        /*if(Math.abs(moveinput)>0.2)
+        moveinput = Input.GetAxis("Wheel");
+        if (Math.Abs(moveinput)>0.2)
          {
           transform.position += new Vector3(Math.Abs(moveinput) * speed * Time.deltaTime, 0, 0);
          } 
-        */
+        
 
     }
 }

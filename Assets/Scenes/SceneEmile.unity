@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 1888187640}
   - component: {fileID: 1888187639}
   m_Layer: 5
-  m_Name: other1 (5)
+  m_Name: playerScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,8 +1177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4441057c792c3564f965cab5bde1d46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequence: 80
-  name: Alex2
+  frequence: 0
+  name: you
 --- !u!114 &1888187640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 2023160121}
   - component: {fileID: 2023160123}
   - component: {fileID: 2023160122}
+  - component: {fileID: 2023160124}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1358,6 +1359,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023160120}
   m_CullTransparentMesh: 1
+--- !u!114 &2023160124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023160120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5935ceb7f6a67419a2c567a3d47869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2033191816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0713c2b84fb32547a059a0510e5874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0.7
 --- !u!65 &2136351083
 BoxCollider:
   m_ObjectHideFlags: 0
