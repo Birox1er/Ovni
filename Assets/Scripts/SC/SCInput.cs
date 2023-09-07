@@ -15,16 +15,44 @@ public class SCInput : ScriptableObject
 public class InputCombinaison
 {
     [SerializeField] private List<Inputs> _inputCombinaisonAxis;
+    [SerializeField] private List<Bind> _bind;
 
     public List<Inputs> InputCombinaisonAxis { get => _inputCombinaisonAxis; set => _inputCombinaisonAxis = value; }
+    public List<Bind> Bind { get => _bind; set => _bind = value; }
+
+    public InputCombinaison()
+    {
+        _inputCombinaisonAxis = new List<Inputs>();
+        _bind = new List<Bind>();
+    }
 }
 
 [System.Serializable]
 public class Inputs
 {
-    [SerializeField, InputAxis] private string _inputAxis;
+    [SerializeField] private KeyInput _inputAxis;
     [SerializeField, Range(-1f, 1f)] private float _value;
 
-    public string InputAxis { get => _inputAxis; set => _inputAxis = value; }
+    public KeyInput InputAxis { get => _inputAxis; set => _inputAxis = value; }
     public float Value { get => _value; set => _value = value; }
+}
+
+public enum KeyInput
+{
+    Lever1Up,
+    Lever1Down,
+    Lever2Up,
+    Lever2Down,
+    WhiteArrowUp,
+    WhiteArrowRight,
+    WhiteButton,
+    BlackArrowDown,
+    BlackArrowLeft,
+    BlackButton,
+}
+
+public enum Bind
+{
+    And,
+    Or
 }
