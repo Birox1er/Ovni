@@ -22,4 +22,8 @@ public class Move : MonoBehaviour
         
 
     }
+    public void SelfDestruct()
+    {
+        Destroy(gameObject);
+    }
 }
