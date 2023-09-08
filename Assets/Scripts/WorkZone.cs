@@ -11,7 +11,7 @@ public class WorkZone : MonoBehaviour
         int a = other.transform.childCount;
         other.GetComponent<Sequence>().IsInWorkZone = true;
         Debug.Log("is in work zone");
-        spawn.Spawn();
+        spawn.Init();
         panel.NewPeluche(a);
     }
 

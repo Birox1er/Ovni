@@ -12,69 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9908033df10404ab27b6e00dc276e8, type: 3}
   m_Name: ComputerInput
   m_EditorClassIdentifier: 
-  _wheel:
-    _axis: Wheel
-    _button:
-      _button: MouseX
-      _buttonKeyCode: 0
-      _value: 0
   _leverOneUp:
-    _axis: Lever1
-    _button:
-      _button: d
-      _buttonKeyCode: 100
-      _value: 0
+    _buttonKeyCode: 100
   _leverOneDown:
-    _axis: Lever1
-    _button:
-      _button: e
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 101
   _leverTwoUp:
-    _axis: Lever2
-    _button:
-      _button: f
-      _buttonKeyCode: 0
-      _value: 0
+    _buttonKeyCode: 102
   _leverTwoDown:
-    _axis: Lever2
-    _button:
-      _button: r
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 114
   _whiteArrowUp:
-    _axis: WhiteArrowUp
-    _button:
-      _button: u
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 117
   _whiteArrowRight:
-    _axis: WhiteArrowRight
-    _button:
-      _button: i
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 105
   _whiteButton:
-    _axis: WhiteButton
-    _button:
-      _button: o
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 111
   _blackArrowDown:
-    _axis: BlackArrowDown
-    _button:
-      _button: j
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 106
   _blackArrowLeft:
-    _axis: BlackArrowLeft
-    _button:
-      _button: k
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 107
   _blackButton:
-    _axis: BlackButton
-    _button:
-      _button: l
-      _buttonKeyCode: 0
-      _value: 1
+    _buttonKeyCode: 108
