@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     private TeddysManager _teddyTobuild;
     private TeddysManager _teddysPart;
     private TeddysManager _teddyHighlight;
+    [SerializeField]private ScoreOther playerScore;
 
     private int _partIndex;
 
@@ -81,7 +82,12 @@ public class Spawner : MonoBehaviour
             {
                 InitPart(_partIndex % _teddysPart.TeddyParts.Count);
                 _partIndex++;
+                if (_partIndex == 3)
+                {
+                    playerScore.AddScore();
+                }
             }
+            
         }
     }
 }

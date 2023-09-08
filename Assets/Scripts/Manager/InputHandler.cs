@@ -13,9 +13,9 @@ public static class InputHandler
                 inputChecked++;
             }
         }
-        if (inputCombinaison.Bind[0] == Bind.And && inputChecked == inputCombinaison.InputCombinaisonAxis.Count) {
+        if ((inputCombinaison.Bind.Count == 0 || inputCombinaison.Bind[0] == Bind.And )&& inputChecked == inputCombinaison.InputCombinaisonAxis.Count) {
             return true;
-        } else if (inputCombinaison.Bind[0] == Bind.Or && inputChecked > 0) {
+        } else if (inputCombinaison.Bind.Count != 0 && inputCombinaison.Bind[0] == Bind.Or && inputChecked > 0) {
             return true;
         }
         return false;
@@ -25,7 +25,7 @@ public static class InputHandler
     {
         InputBinds inputBinds = GameManager.Instance.GetInputBinds(input.InputAxis);
     
-        if (Input.GetKeyDown(inputBinds.ButtonKeyCode) == true)
+        if (Input.GetKey(inputBinds.ButtonKeyCode) == true)
             return true;
         return false;
     }
