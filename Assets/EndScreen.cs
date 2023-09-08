@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class EndScreen : MonoBehaviour
@@ -13,6 +14,11 @@ public class EndScreen : MonoBehaviour
     private void Update()
     {
         textScore.text = " " + score.Score + " Teddy built ! ";
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 }
