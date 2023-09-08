@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _teddys;
     [SerializeField] private GameObject[] _spawnPartPoints;
-
+    [SerializeField] private Material _highLightMaterial;
     private List<InputCombinaison> _inputCombinaisons;
     private TeddysManager _teddyTobuild;
     private TeddysManager _teddysPart;
@@ -28,6 +28,10 @@ public class Spawner : MonoBehaviour
         _teddysPart = Instantiate(_teddys[pickedIndex], _spawnPartPoints[_partIndex].transform.position, Quaternion.identity).GetComponent<TeddysManager>();
         _teddyHighlight = Instantiate(_teddys[pickedIndex], transform.position, Quaternion.identity).GetComponent<TeddysManager>();
         _teddyHighlight.GetComponent<Collider>().enabled = false;
+        foreach (MeshRenderer renderer in _teddyHighlight.GetComponentsInChildren<MeshRenderer>())
+        {
+            renderer.material = _highLightMaterial;
+        }
 
         _teddyTobuild.gameObject.name = "ToBuild";
         _teddysPart.gameObject.name = "Part";
