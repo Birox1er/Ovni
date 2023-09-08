@@ -12,4 +12,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec59d576029ce8b4eb388e9958bd11fa, type: 3}
   m_Name: Inputs
   m_EditorClassIdentifier: 
-  _inputsCombinaisons: []
+  _inputsCombinaisons:
+  - _inputCombinaisonAxis:
+    - _inputAxis: 2
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 1
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 5
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 1
+      _value: 0
+    - _inputAxis: 1
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 2
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 5
+      _value: 0
+    - _inputAxis: 1
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 0
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 4
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 2
+      _value: 0
+    - _inputAxis: 0
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 5
+      _value: 0
+    - _inputAxis: 3
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 4
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 0
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 5
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 4
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 4
+      _value: 0
+    - _inputAxis: 4
+      _value: 0
+    - _inputAxis: 1
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 3
+      _value: 0
+    - _inputAxis: 5
+      _value: 0
+    - _inputAxis: 4
+      _value: 0
+    _bind: 
+  - _inputCombinaisonAxis:
+    - _inputAxis: 4
+      _value: 0
+    - _inputAxis: 8
+      _value: 0
+    - _inputAxis: 7
+      _value: 0
+    - _inputAxis: 3
+      _value: 0
+    _bind: 
