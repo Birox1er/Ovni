@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec59d576029ce8b4eb388e9958bd11fa, type: 3}
   m_Name: Inputs
   m_EditorClassIdentifier: 
+    - _inputAxis: 0
   _inputsCombinaisons:
   - _inputCombinaisonAxis:
     - _inputAxis: 2

@@ -14,6 +14,10 @@ public class Spawner : MonoBehaviour
 
     private int _partIndex;
 
+    public List<InputCombinaison> InputCombinaisons { get => _inputCombinaisons; }
+    public int PartIndex { get => _partIndex; }
+    public TeddysManager TeddyTobuild { get => _teddyTobuild; }
+
     private void Start()
     {
         Init();
