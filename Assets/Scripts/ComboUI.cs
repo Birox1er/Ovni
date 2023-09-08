@@ -20,6 +20,10 @@ public class ComboUI : MonoBehaviour
         }
         if (spawner.TeddyTobuild.isInArea)
         {
+            if (spawner.PartIndex >= 3)
+            {
+                return;
+            }
             InputCombinaison currentCombinaison = spawner.InputCombinaisons[spawner.PartIndex];
             for (int i = 0; i < currentCombinaison.InputCombinaisonAxis.Count; i++)
             {

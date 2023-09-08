@@ -4,19 +4,33 @@ using UnityEngine;
 
 public class WorkZone : MonoBehaviour
 {
+    private static WorkZone _instance;
+
     [SerializeField] private Spawner spawn;
     [SerializeField] private LedPanel panel;
     [SerializeField] private ComboUI comboDisplay;
+    private TeddysManager _teddy;
+
+    public TeddysManager Teddy { get => _teddy; }
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("In");
-        TeddysManager teddy = other.GetComponent<TeddysManager>();
-        if (teddy == null)
+        _teddy = other.GetComponent<TeddysManager>();
+        if (_teddy == null)
         {
             return;
         }
         int nbParts = other.GetComponent<TeddysManager>().TeddyParts.Count;
-        teddy.isInArea = true;
+        _teddy.isInArea = true;
         //other.GetComponent<Sequence>().IsInWorkZone = true;
         Debug.Log("is in work zone");
         //activate whatever the comboUi does
@@ -25,12 +39,12 @@ public class WorkZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        TeddysManager teddy = other.GetComponent<TeddysManager>();
-        if (teddy == null)
+        _teddy = other.GetComponent<TeddysManager>();
+        if (_teddy == null)
         {
             return;
         }
-        teddy.isInArea = false;
+        _teddy.isInArea = false;
         spawn.Init();
     }
 }

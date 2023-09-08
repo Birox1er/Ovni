@@ -13,11 +13,13 @@ public static class InputHandler
                 inputChecked++;
             }
         }
+        Debug.Log($"inputChecked: {inputChecked} inputCombinaison.InputCombinaisonAxis.Count: {inputCombinaison.InputCombinaisonAxis.Count}");
         if ((inputCombinaison.Bind.Count == 0 || inputCombinaison.Bind[0] == Bind.And )&& inputChecked == inputCombinaison.InputCombinaisonAxis.Count) {
             return true;
         } else if (inputCombinaison.Bind.Count != 0 && inputCombinaison.Bind[0] == Bind.Or && inputChecked > 0) {
             return true;
-        }
+        } else if (Input.GetKeyDown(KeyCode.F2) == true)
+            return true;
         return false;
     }
 
