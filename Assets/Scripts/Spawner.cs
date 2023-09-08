@@ -7,13 +7,14 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject[] _teddys;
     [SerializeField] private GameObject[] _spawnPartPoints;
 
+    private List<InputCombinaison> _inputCombinaisons;
     private TeddysManager _teddyTobuild;
     private TeddysManager _teddysPart;
     private TeddysManager _teddyHighlight;
 
     private int _partIndex;
 
-    private void Awake()
+    private void Start()
     {
         Init();
     }
@@ -33,8 +34,10 @@ public class Spawner : MonoBehaviour
 
         _teddyTobuild.DeactivateAllParts();
         _teddysPart.DeactivateAllParts();
+        Destroy(_teddysPart.GetComponent<Move>());
         _teddyHighlight.ActivateAllParts();
         _teddysPart.ActivatePartsByIndex(_partIndex);
+        _inputCombinaisons = GameManager.Instance.InputsCombo.GenerateList();
     }
 
     private void Reset()

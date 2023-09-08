@@ -9,6 +9,17 @@ public class SCInput : ScriptableObject
     [SerializeField] private List<InputCombinaison> _inputsCombinaisons = new List<InputCombinaison>();
 
     public List<InputCombinaison> InputsCombinaisons { get => _inputsCombinaisons; set => _inputsCombinaisons = value; }
+
+    public List<InputCombinaison> GenerateList()
+    {
+        List<InputCombinaison> list = new List<InputCombinaison>();
+
+        for (int i = 0; i < 3; i++) {
+            int index = Random.Range(0, InputsCombinaisons.Count);
+            list.Add(InputsCombinaisons[index]);
+        }
+        return list;
+    }
 }
 
 [System.Serializable]
