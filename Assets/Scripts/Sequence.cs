@@ -26,11 +26,10 @@ public class Sequence : MonoBehaviour
         if (isInWorkZone)
         {
             //set le combo à faire
-            if(inFabrication = false)
+            if(inFabrication == false)
             {
                 StartCoroutine(Fabrication());
             }
-
             if (Input.GetAxis("WhiteButton") != 0)
             {
                 if (validated == transform.childCount)
@@ -41,9 +40,7 @@ public class Sequence : MonoBehaviour
                 {
                     joueur.RemoveScore();
                 }
-            }
-
-            
+            }  
         }
     }
     IEnumerator Fabrication()
