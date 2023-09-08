@@ -27,6 +27,7 @@ public class Spawner : MonoBehaviour
         _teddyTobuild = Instantiate(_teddys[pickedIndex], transform.position, Quaternion.identity).GetComponent<TeddysManager>();
         _teddysPart = Instantiate(_teddys[pickedIndex], _spawnPartPoints[_partIndex].transform.position, Quaternion.identity).GetComponent<TeddysManager>();
         _teddyHighlight = Instantiate(_teddys[pickedIndex], transform.position, Quaternion.identity).GetComponent<TeddysManager>();
+        _teddyHighlight.GetComponent<Collider>().enabled = false;
 
         _teddyTobuild.gameObject.name = "ToBuild";
         _teddysPart.gameObject.name = "Part";
