@@ -59,19 +59,23 @@ public class Spawner : MonoBehaviour
         _teddysPart.ActivatePartsByIndex((index + 1) % _teddysPart.TeddyParts.Count);
         _teddysPart.transform.position = _spawnPartPoints[(index + 1) % _teddysPart.TeddyParts.Count].transform.position;
         if (_teddyHighlight.TeddyParts[index].IsActivated == true)
+        {
             _teddyHighlight.DeactivatePartsByIndex(index);
+            _teddyTobuild.ActivatePartsByIndex(index);
+        }
+            
+
         
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            InitPart(_partIndex % _teddysPart.TeddyParts.Count);
-            _partIndex++;
-        }
-        if (_partIndex > 3) {
-            Reset();
-            Init();
+            if (_teddyTobuild.isInArea && _partIndex < 3)
+            {
+                InitPart(_partIndex % _teddysPart.TeddyParts.Count);
+                _partIndex++;
+            }
         }
     }
 }

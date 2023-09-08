@@ -16,7 +16,7 @@ public class WorkZone : MonoBehaviour
             return;
         }
         int nbParts = other.GetComponent<TeddysManager>().TeddyParts.Count;
-        spawn.Init();
+        teddy.isInArea = true;
         //other.GetComponent<Sequence>().IsInWorkZone = true;
         Debug.Log("is in work zone");
         //activate whatever the comboUi does
@@ -25,7 +25,12 @@ public class WorkZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("out of work zone");
-        other.GetComponent<Move>().SelfDestruct();
+        TeddysManager teddy = other.GetComponent<TeddysManager>();
+        if (teddy == null)
+        {
+            return;
+        }
+        teddy.isInArea = false;
+        spawn.Init();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TeddysManager : MonoBehaviour
 {
     [SerializeField] private List<TeddysPart> _teddyParts;
+    public bool isInArea { get; set; }
 
     public List<TeddysPart> TeddyParts { get => _teddyParts; }
 
