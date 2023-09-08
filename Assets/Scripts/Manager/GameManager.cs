@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     private SCInputBinds _inputBinds;
     private SCInput _inputsCombo;
+    [SerializeField] private InputControler _inputControler;
 
     public SCInputBinds InputBinds => _inputBinds;
     public SCInput InputsCombo => _inputsCombo;
@@ -35,7 +36,10 @@ public class GameManager : MonoBehaviour
 
     private void LoadBindings()
     {
-        _inputBinds = Resources.Load<SCInputBinds>("ScriptableObject/Binds/ComputerInput");
+        if (_inputControler == InputControler.Keyboard)
+            _inputBinds = Resources.Load<SCInputBinds>("ScriptableObject/Binds/ComputerInput");
+        if (_inputControler == InputControler.Controller)
+            _inputBinds = Resources.Load<SCInputBinds>("ScriptableObject/Binds/ControllerInput");
         
         if (_inputBinds == null) {
             Debug.LogError("InputBinds not found");
@@ -69,4 +73,10 @@ public class GameManager : MonoBehaviour
                 return null;
         }
     }
+}
+
+public enum InputControler
+{
+    Keyboard,
+    Controller
 }

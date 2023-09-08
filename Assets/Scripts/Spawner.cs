@@ -33,9 +33,9 @@ public class Spawner : MonoBehaviour
 
         Debug.Log("Init()");
         _partIndex = 0;
-        _teddyTobuild = Instantiate(_teddys[pickedIndex], transform.position, Quaternion.identity).GetComponent<TeddysManager>();
-        _teddysPart = Instantiate(_teddys[pickedIndex], _spawnPartPoints[_partIndex].transform.position, Quaternion.identity).GetComponent<TeddysManager>();
-        _teddyHighlight = Instantiate(_teddys[pickedIndex], transform.position, Quaternion.identity).GetComponent<TeddysManager>();
+        _teddyTobuild = Instantiate(_teddys[pickedIndex], transform.position, _teddys[pickedIndex].transform.rotation).GetComponent<TeddysManager>();
+        _teddysPart = Instantiate(_teddys[pickedIndex], _spawnPartPoints[_partIndex].transform.position, _teddys[pickedIndex].transform.rotation).GetComponent<TeddysManager>();
+        _teddyHighlight = Instantiate(_teddys[pickedIndex], transform.position, _teddys[pickedIndex].transform.rotation).GetComponent<TeddysManager>();
         _teddyHighlight.GetComponent<Collider>().enabled = false;
         _teddysPart.GetComponent<Collider>().enabled = false;
         foreach (MeshRenderer renderer in _teddyHighlight.GetComponentsInChildren<MeshRenderer>())

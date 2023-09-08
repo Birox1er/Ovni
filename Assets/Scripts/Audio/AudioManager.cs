@@ -7,15 +7,15 @@ public class AudioManager : MonoBehaviour
     private static AudioManager _instance;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _clip;
-    [SerializeField] private float _volume;
-    [SerializeField] private float _pitch;
+    [SerializeField, Range(0, 100)] private int _volume;
+    [SerializeField, Range(0f, 3f)] private float _pitch;
     [SerializeField] private bool _loop;
     [SerializeField] private bool _playOnAwake;
 
     public static AudioManager Instance { get => _instance; }
     public AudioSource AudioSource { get => _audioSource; set => _audioSource = value; }
     public AudioClip Clip { get => _clip; set => _clip = value; }
-    public float Volume { get => _volume; set => _volume = value; }
+    public int Volume { get => _volume; set => _volume = value; }
     public float Pitch { get => _pitch; set => _pitch = value; }
     public bool Loop { get => _loop; set => _loop = value; }
     public bool PlayOnAwake { get => _playOnAwake; set => _playOnAwake = value; }
@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         }
         AudioSource = GetComponent<AudioSource>();
         AudioSource.clip = Clip;
-        AudioSource.volume = Volume;
+        AudioSource.volume = (float)(Volume / 100f);
         AudioSource.pitch = Pitch;
         AudioSource.loop = Loop;
         AudioSource.playOnAwake = PlayOnAwake;
