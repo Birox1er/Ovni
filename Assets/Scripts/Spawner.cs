@@ -70,8 +70,10 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            if (_teddyTobuild.isInArea && _partIndex < 3)
+        if (_partIndex >= 3)
+            return;
+        if (InputHandler.HandleInput(_inputCombinaisons[_partIndex])) {
+            if (_teddyTobuild.isInArea)
             {
                 InitPart(_partIndex % _teddysPart.TeddyParts.Count);
                 _partIndex++;
